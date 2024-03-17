@@ -17,4 +17,6 @@ ffmpeg-python
 importlib_resources
 sox
 pyloudnorm
+libsox-dev
 soxbindings>=1.2.2 ; platform_system!='Windows'
+
