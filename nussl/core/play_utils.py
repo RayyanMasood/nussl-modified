@@ -13,7 +13,11 @@ import importlib_resources as pkg_resources
 from . import templates
 from .utils import _close_temp_files
 
-multitrack_template = pkg_resources.read_text(templates, 'multitrack.html')
+from importlib_resources import files
+# Reads contents with UTF-8 encoding and returns str.
+multitrack_template = files(templates).joinpath('multitrack.html').read_text()
+
+# multitrack_template = pkg_resources.read_text(templates, 'multitrack.html')
 
 
 def _check_imports():
