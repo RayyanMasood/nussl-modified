@@ -137,7 +137,7 @@ class SeparationBase(object):
 
         if label is None: label = f"Separation via {type(self).__name__}"
 
-        audio_in = gradio.inputs.Audio(source=source, type="file", label=label)
+        audio_in = gradio.Audio(sources=source, type="filepath", label=label)
         if separate_fn is None:
             separate_fn = _separate
 
