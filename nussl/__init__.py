@@ -15,10 +15,10 @@ class ImportErrorClass(object):
 import warnings
 
 try:
-    import musdb
+    import msbdb
 except RuntimeError:
     warnings.warn(
-        "Importing musdb failed, likely because ffmpeg or ffprobe are not installed!.")
+        "Importing msbdb failed, likely because ffmpeg or ffprobe are not installed!.")
     musdb = None
 
 from .core import AudioSignal, STFTParams

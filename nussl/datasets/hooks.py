@@ -7,7 +7,7 @@ in machine learning pipelines.
 """
 import os
 
-from .. import musdb
+from .. import msbdb
 import jams
 
 from ..core import constants, utils
@@ -64,20 +64,20 @@ class MUSDB18(BaseDataset):
         subsets = ['train', 'test'] if subsets is None else subsets
         if folder is None:
             folder = os.path.join(
-                constants.DEFAULT_DOWNLOAD_DIRECTORY, 'musdb18'
+                constants.DEFAULT_DOWNLOAD_DIRECTORY, 'msbdb24'
             )
-        self.musdb = musdb.DB(root=folder, is_wav=is_wav, download=download, 
+        self.msbdb = msbdb.DB(root=folder, is_wav=is_wav, download=download, 
                               subsets=subsets, split=split)
         super().__init__(folder, **kwargs)
         self.metadata['subsets'] = subsets
         self.metadata['split'] = split
 
     def get_items(self, folder):
-        items = range(len(self.musdb))
+        items = range(len(self.msbdb))
         return list(items)
 
     def process_item(self, item):
-        track = self.musdb[item]
+        track = self.msbdb[item]
         mix, sources = utils.musdb_track_to_audio_signals(track)
         self._setup_audio_signal(mix)
         for source in list(sources.values()):
@@ -87,7 +87,7 @@ class MUSDB18(BaseDataset):
             'mix': mix,
             'sources': sources,
             'metadata': {
-                'labels': ['bass', 'drums', 'other', 'vocals']
+                'labels': ['background', 'music', 'speech']
             }
         }
         return output
