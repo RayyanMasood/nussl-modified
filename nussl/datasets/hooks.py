@@ -29,13 +29,12 @@ class MUSDB18(BaseDataset):
         {
             'mix': [AudioSignal object containing mix audio],
             'source': {
-                'bass': [AudioSignal object containing vocals],
-                'drums': [AudioSignal object containing drums],
-                'other': [AudioSignal object containing other],
-                'vocals': [AudioSignal object containing vocals],
+                'background': [AudioSignal object containing vocals],
+                'music': [AudioSignal object containing drums],
+                'speech': [AudioSignal object containing vocals],
             }
             'metadata': {
-                'labels': ['bass', 'drums', 'other', 'vocals']
+                'labels': ['background', 'music', 'speech']
             }
         }
     

@@ -161,7 +161,7 @@ def test_transform_compose(musdb_tracks):
         'mix': mix,
         'sources': sources,
         'metadata': {
-            'labels': ['bass', 'drums', 'other', 'vocals']
+            'labels': ['background', 'music', 'speech']
         }
     }
 
