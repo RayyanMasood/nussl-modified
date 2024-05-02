@@ -237,7 +237,7 @@ def musdb_track_to_audio_signals(track):
             audio_data_array=stems[v.stem_id],
             sample_rate=track.rate
         )
-        sources[k].path_to_input_file = f'msbdb/{track.name}_{k}.wav'
+        sources[k].path_to_input_file = f'musdb/{track.name}_{k}.wav'
 
     return mixture, sources
 
