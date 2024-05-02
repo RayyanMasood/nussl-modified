@@ -9,7 +9,7 @@ pytest
 pytest-cov
 IPython
 ffmpy
-scaper
+# scaper
 tqdm
 termtables
 jupyter
