@@ -89,12 +89,11 @@ USE_LIBROSA_STFT = False  #: (bool): Whether *nussl* will use librosa's stft fun
 
 # ############# MUSDB interface ############### #
 STEM_TARGET_DICT = OrderedDict([
-    ('drums', 'drums'), 
-    ('bass', 'bass'), 
-    ('other', 'other'),
-    ('vocals', 'vocals'), 
-    ('accompaniment', 'bass+drums+other'), 
-    ('linear_mixture', 'vocals+bass+drums+other')
+    ('music', 'music'), 
+    ('background', 'background'), 
+    ('speech', 'speech'), 
+    ('accompaniment', 'background+speech'), 
+    ('linear_mixture', 'speech+background+music')
 ])
 
 # ################## Effects ################## #

@@ -66,8 +66,8 @@ visualize_and_embed(sources)
 # item in the dataset looked more like this:
 
 # +
-vocals = sources['vocals']
-accompaniment = sources['drums'] + sources['bass'] + sources['other']
+vocals = sources['speech']
+accompaniment = sources['background'] + sources['music']
 
 new_sources = {'vocals': vocals, 'accompaniment': accompaniment}
 visualize_and_embed(new_sources)
@@ -79,7 +79,7 @@ visualize_and_embed(new_sources)
 # by type, using `nussl.datasets.transforms.SumSources`:
 
 # +
-tfm = nussl.datasets.transforms.SumSources([['drums', 'bass', 'other']])
+tfm = nussl.datasets.transforms.SumSources([['music', 'background']])
 # SumSources takes a list of lists, which each item in the list being 
 # a group of sources that will be summed into a single source
 musdb = nussl.datasets.MUSDB18(download=True, transform=tfm)
