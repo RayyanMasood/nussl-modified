@@ -34,7 +34,7 @@ setup(
     author_email='ethanmanilow@u.northwestern.edu',
     maintainer='E. Manilow, P. Seetharaman, F. Pishdadian, N. Shelly, A. Bugler, B. Pardo',
     maintainer_email='ethanmanilow@u.northwestern.edu',
-    url='https://github.com/interactiveaudiolab/nussl',
+    url='https://github.com/RayyanMasood/nussl-modified',
     license='MIT',
     packages=find_packages(),
     package_data={'': ['core/templates/multitrack.html']},
