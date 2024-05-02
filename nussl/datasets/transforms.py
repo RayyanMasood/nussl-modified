@@ -127,6 +127,7 @@ class SumSources(object):
         data[self.source_key] = sources
         if 'metadata' in data:
             if 'labels' in data['metadata']:
+                print(data['metadata']['labels'])
                 data['metadata']['labels'].extend(self.group_names)
 
         return data
