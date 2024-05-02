@@ -271,6 +271,9 @@ folder = make_mix_source_folder(source_data, target_dir)
 msf = nussl.datasets.MixSourceFolder(folder)
 item = msf[0]
 sources = item['sources']
+labels = item['metadata']['labels']
+print('Sources:', list(sources.keys()))
+print('Labels:', labels)
 
 visualize_and_embed(sources, y_axis='linear')
 # -

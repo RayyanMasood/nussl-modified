@@ -175,6 +175,8 @@ class MixSourceFolder(BaseDataset):
                 if os.path.isdir(os.path.join(folder, f))
                 and f != self.mix_folder
             ])
+        
+        print(self.source_folders)
 
         if self.make_mix:
             mix_folder = os.path.join(folder, self.source_folders[0])
