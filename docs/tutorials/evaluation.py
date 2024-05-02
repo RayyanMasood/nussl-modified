@@ -69,7 +69,7 @@ visualize_and_embed(sources)
 vocals = sources['speech']
 accompaniment = sources['background'] + sources['music']
 
-new_sources = {'vocals': vocals, 'accompaniment': accompaniment}
+new_sources = {'speech': vocals, 'accompaniment': accompaniment}
 visualize_and_embed(new_sources)
 # -
 
@@ -142,7 +142,7 @@ visualize_and_embed(hpss_estimates)
 
 # +
 # make sources a list to feed into eval
-sources_list = [sources['drums+bass+other'], sources['vocals']]
+sources_list = [sources['music+background'], sources['speech']]
 
 # 1. Original BSS Evaluation metrics
 original_bss = nussl.evaluation.BSSEvalV4(

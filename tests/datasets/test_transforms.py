@@ -148,7 +148,7 @@ def test_transform_sum_sources(musdb_tracks):
 
     pytest.raises(TransformException,
                   transforms.SumSources,
-                  [['vocals', 'test'], ['test2', 'test3']],
+                  [['speech', 'test'], ['test2', 'test3']],
                   ['mygroup']
                   )
 
@@ -174,7 +174,7 @@ def test_transform_compose(musdb_tracks):
 
     msa = transforms.MagnitudeSpectrumApproximation()
     tfm = transforms.SumSources(
-        [['other', 'drums', 'bass']],
+        [['speech', 'background']],
         group_names=['accompaniment']
     )
     assert isinstance(str(tfm), str)
@@ -186,7 +186,7 @@ def test_transform_compose(musdb_tracks):
 
     assert np.allclose(data['mix_magnitude'], np.abs(mix.stft()))
     assert data['metadata']['labels'] == [
-        'bass', 'drums', 'other', 'vocals', 'accompaniment']
+        'background', 'music', 'speech', 'accompaniment']
 
     mask_data = (
             data['source_magnitudes'] /
