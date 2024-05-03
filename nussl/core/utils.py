@@ -8,7 +8,7 @@ import warnings
 import numpy as np
 import torch
 import random
-from .. import musdb
+from .. import msbdb
 import librosa
 from . import constants
 
