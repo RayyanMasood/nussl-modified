@@ -2,7 +2,6 @@ jams
 librosa
 matplotlib
 museval
-# musdb
 pyyaml
 zarr
 ffmpy
