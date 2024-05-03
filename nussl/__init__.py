@@ -15,7 +15,7 @@ class ImportErrorClass(object):
 import warnings
 
 try:
-    import musdb
+    import msbdb
 except RuntimeError:
     warnings.warn(
         "Importing msbdb failed, likely because ffmpeg or ffprobe are not installed!.")

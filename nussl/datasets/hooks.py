@@ -7,7 +7,7 @@ in machine learning pipelines.
 """
 import os
 
-from .. import musdb
+from .. import msbdb
 import jams
 
 from ..core import constants, utils
@@ -65,7 +65,7 @@ class MUSDB18(BaseDataset):
             folder = os.path.join(
                 constants.DEFAULT_DOWNLOAD_DIRECTORY, 'msbdb24'
             )
-        self.musdb = musdb.DB(root=folder, is_wav=is_wav, download=download, 
+        self.musdb = msbdb.DB(root=folder, is_wav=is_wav, download=download, 
                               subsets=subsets, split=split)
         super().__init__(folder, **kwargs)
         self.metadata['subsets'] = subsets
