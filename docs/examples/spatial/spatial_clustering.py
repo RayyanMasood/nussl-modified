@@ -126,9 +126,8 @@ i = 39
 # +
 item = musdb[i]
 sources = [
-    item['sources']['other'], 
-    item['sources']['vocals'],
-    item['sources']['bass']
+    item['sources']['speech'],
+    item['sources']['background']
 ]
 
 a = nussl.mixing.pan_audio_signal(sources[0], -35)
