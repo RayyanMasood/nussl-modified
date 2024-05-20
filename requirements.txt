@@ -1,5 +1,5 @@
 jams
-librosa
+librosa==0.9.2
 matplotlib
 museval
 pyyaml
