@@ -61,11 +61,11 @@ class MaskBase(object):
         if value.ndim == 1:
             raise ValueError('Cannot support arrays with less than 2 dimensions!')
 
-        if value.ndim == 2:
+        if value.ndim >= 2:
             value = np.expand_dims(value, axis=constants.STFT_CHAN_INDEX)
 
-        if value.ndim > 3:
-            raise ValueError('Cannot support arrays with more than 3 dimensions!')
+        # if value.ndim > 3:
+        #     raise ValueError('Cannot support arrays with more than 3 dimensions!')
 
         self._mask = self._validate_mask(value)
 
