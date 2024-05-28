@@ -58,6 +58,7 @@ class MaskBase(object):
     def mask(self, value):
         assert isinstance(value, np.ndarray), 'Type of self.mask must be np.ndarray!'
 
+        print("The array's dimensions are: ", value.ndim)
         if value.ndim == 1:
             raise ValueError('Cannot support arrays with less than 2 dimensions!')
 
